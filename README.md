@@ -1,4 +1,4 @@
-# Semaphore-docker
+# semaphore-docker
 
 ## DESCRIPTION
 This project is a Docker wrapper around ansible-semaphore https://github.com/ansible-semaphore/semaphore

@@ -3,8 +3,11 @@ root
 
 semaphore
 /opt/data/semaphore
+
+
+
 yes
-admin
-admn@domain.tld
-Admin User
+semaphore
+semaphore@localhost
+semaphore
 password

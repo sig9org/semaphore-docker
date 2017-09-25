@@ -1,0 +1,2 @@
+SEMAPHORE_CONFIG=/opt/semaphore/semaphore_config.json
+SEMAPHORE_LOGS=/var/log/semaphore.log

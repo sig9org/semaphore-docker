@@ -2,7 +2,8 @@ MYSQL_IP_ADDR:3306
 root
 
 semaphore
-/opt/data/semaphore
+/opt/semaphore
+
 
 
 

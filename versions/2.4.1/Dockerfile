@@ -2,7 +2,7 @@ FROM centos:7.4.1708
 
 LABEL name="Ansible Semaphore" version="2.4.1"
 
-ADD opt/ /opt/
+ADD files/ /
 
 RUN yum -y update \
  && yum -y install gcc git python-devel wget \

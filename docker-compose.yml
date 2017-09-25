@@ -1,21 +1,21 @@
-mysql:
-  image: mysql
-  environment:
-    MYSQL_DATABASE: 'semaphore'
-    MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-  hostname: mysql
-  expose:
-    - 3306
-  volumes:
-    - /opt/data/mysql/:/var/lib/mysql
-
-semaphore:
-  image: sig9/semaphore:latest
-  expose:
-    - 3000
-  ports:
-    - 3000:3000
-  links:
-    - mysql:mysql
-#  volumes:
-#    - /opt/data/semaphore/:/opt/data/semaphore
+version: '2'
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: 'semaphore'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+    hostname: mysql
+    expose:
+      - 3306
+    volumes:
+      - /opt/data/mysql/:/var/lib/mysql
+  
+  semaphore:
+    image: sig9/semaphore:latest
+    depends_on:
+      - mysql
+    ports:
+      - 3000:3000
+    links:
+      - mysql:mysql

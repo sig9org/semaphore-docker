@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-until mysql -h"${MYSQL_PORT_3306_TCP_ADDR}" -u"root" &> /dev/null
-do
-  sleep 1
-done
+/waitforit -host ${MYSQL_PORT_3306_TCP_ADDR} -port=3306 -timeout=120
 
 # If this is the first time we have run this container, update place holder to env vars in config files
 if [ -e /firstrun ]; then

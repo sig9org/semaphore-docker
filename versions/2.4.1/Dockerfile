@@ -12,7 +12,7 @@ RUN chmod a+x /waitforit \
  && yum -y update \
  && yum -y install gcc git python-devel wget \
  && curl -L https://bootstrap.pypa.io/get-pip.py | python \
- && pip install ansible \
+ && pip install ansible pysphere \
  && wget https://github.com/ansible-semaphore/semaphore/releases/download/v$SEMAPHORE_VERSION/semaphore_linux_amd64 \
  && mv semaphore_linux_amd64 /usr/bin/semaphore \
  && chmod a+x /usr/bin/semaphore \

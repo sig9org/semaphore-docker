@@ -16,11 +16,10 @@ RUN chmod a+x /waitforit \
  && wget https://github.com/ansible-semaphore/semaphore/releases/download/v$SEMAPHORE_VERSION/semaphore_linux_amd64 \
  && mv semaphore_linux_amd64 /usr/bin/semaphore \
  && chmod a+x /usr/bin/semaphore \
- && mkdir -p /opt/data/semaphore \
- && touch /firstrun
+ && mkdir -p /opt/semaphore
 
 EXPOSE 3000
 WORKDIR /opt/semaphore
 
 # Default Command
-CMD ["/bin/bash", "-c", "/opt/semaphore/start.sh"]
+CMD ["/bin/bash", "-c", "/var/lib/semaphore/start.sh"]

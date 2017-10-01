@@ -19,6 +19,8 @@ services:
       - 3000:3000
     links:
       - mysql:mysql
+    volumes:
+      - /opt/data/semaphore/:/opt/semaphore
 
   gitbucket:
     image: sig9/gitbucket:latest
